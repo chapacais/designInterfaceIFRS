@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprendendo TypeScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Aprendendo TypeScript</h1>
+      <p>
+        TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft que adiciona tipagem estática opcional ao JavaScript. Ela permite detectar erros
+        ainda durante o desenvolvimento, melhora a legibilidade do código e facilita a manutenção de projetos grandes, sendo hoje uma das ferramentas mais utilizadas no
+        desenvolvimento front-end e back-end.
+      </p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#tipos-basicos">Tipos Básicos</a></li>
+        <li><a href="#interfaces">Interfaces e Types</a></li>
+        <li><a href="#generics">Generics</a></li>
+        <li><a href="#formulario">Formulário</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div id="tipos-basicos">
+        <h2>Tipos Básicos</h2>
+        <p>
+          Uma das principais características do TypeScript é o seu sistema de tipos. Diferente do JavaScript puro, é possível declarar explicitamente o tipo de uma variável,
+          parâmetro de função ou retorno, permitindo que o compilador identifique erros antes mesmo da execução do código.
+        </p>
+        <ul class="lista-tipos">
+          <li>
+            <b>string</b>
+            - representa cadeias de texto
+          </li>
+          <li>
+            <b>number</b>
+            - representa valores numéricos, inteiros ou decimais
+          </li>
+          <li>
+            <b>boolean</b>
+            - representa valores verdadeiro ou falso
+          </li>
+          <li>
+            <b>any</b>
+            - desativa a checagem de tipos para aquela variável
+          </li>
+          <li>
+            <b>unknown</b>
+            - semelhante ao any, porém mais seguro
+          </li>
+          <li>
+            <b>never</b>
+            - representa valores que nunca ocorrem
+          </li>
+        </ul>
+      </div>
+
+      <div class="imagens-container">
+        <h2>Exemplos Visuais</h2>
+        <p>
+          As imagens abaixo ilustram conceitos relacionados ao TypeScript. A primeira é apenas ilustrativa e a segunda funciona também como link para a documentação oficial da
+          linguagem.
+        </p>
+        <figure>
+          <img width="500" src="img/post-typescript-01-1.png" alt="Trecho de código TypeScript com tipagem" />
+          <figcaption>Exemplo de código tipado</figcaption>
+        </figure>
+        <figure>
+          <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">
+            <img src="img/typescript_plain_logo_icon_146316.webp" width="100" height="100" alt="Logotipo do TypeScript, link para o site oficial" />
+          </a>
+          <figcaption>Site oficial do TypeScript</figcaption>
+        </figure>
+      </div>
+
+      <div id="interfaces">
+        <h2>Interfaces e Type Alias</h2>
+        <p>
+          Para descrever a estrutura de objetos, o TypeScript oferece dois recursos parecidos, porém com diferenças importantes: as interfaces e os type alias. Ambos permitem
+          nomear um formato de dado e reutilizá-lo em diversas partes do código, mas se comportam de maneira distinta em certas situações.
+        </p>
+        <table>
+          <caption>Comparação entre Interface e Type Alias</caption>
+          <thead>
+            <tr>
+              <th scope="col">Característica</th>
+              <th scope="col">Interface</th>
+              <th scope="col">Type Alias</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Reabertura (declaration merging)</td>
+              <td>Suportada</td>
+              <td>Não suportada</td>
+            </tr>
+            <tr class="destaque">
+              <td>Uso principal</td>
+              <td>Descrever formato de objetos e classes</td>
+              <td>Uniões, interseções e tipos primitivos</td>
+            </tr>
+            <tr>
+              <td>Herança</td>
+              <td>Usa a palavra-chave extends</td>
+              <td>Usa o operador de interseção "&"</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Ambas deixam de existir após a compilação, pois o TypeScript é convertido em JavaScript puro.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div id="generics">
+        <h2>Generics</h2>
+        <p>
+          Generics permitem criar componentes, funções e classes reutilizáveis que funcionam com múltiplos tipos, mantendo a segurança de tipos. Em vez de fixar um tipo específico,
+          define-se um parâmetro de tipo, como T, que é substituído pelo tipo real no momento em que a função ou classe é utilizada.
+        </p>
+      </div>
+
+      <div id="formulario">
+        <h2>Formulário de Feedback</h2>
+        <p>Utilize o formulário abaixo para enviar dúvidas, sugestões ou comentários sobre o conteúdo apresentado nesta página sobre TypeScript.</p>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Dados do Visitante</legend>
+
+            <div class="campo">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+            </div>
+
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
+            </div>
+
+            <div class="campo">
+              <label for="nascimento">Data de nascimento</label>
+              <input type="date" id="nascimento" name="nascimento" />
+            </div>
+
+            <div class="campo">
+              <label for="experiencia">Anos de experiência com programação</label>
+              <input type="number" id="experiencia" name="experiencia" min="0" max="60" />
+            </div>
+
+            <div class="campo">
+              <label for="nivel">Nível de conhecimento em TypeScript</label>
+              <select id="nivel" name="nivel">
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+              </select>
+            </div>
+
+            <div class="grupo-opcoes">
+              <span>Já utilizou TypeScript antes?</span>
+              <div class="campo campo-radio">
+                <input type="radio" id="usou-sim" name="ja-usou" value="sim" />
+                <label for="usou-sim">Sim</label>
+              </div>
+              <div class="campo campo-radio">
+                <input type="radio" id="usou-nao" name="ja-usou" value="nao" />
+                <label for="usou-nao">Não</label>
+              </div>
+            </div>
+
+            <div class="grupo-opcoes">
+              <span>Áreas de interesse</span>
+              <div class="campo campo-checkbox">
+                <input type="checkbox" id="interesse-frontend" name="interesse" value="frontend" />
+                <label for="interesse-frontend">Front-end</label>
+              </div>
+              <div class="campo campo-checkbox">
+                <input type="checkbox" id="interesse-backend" name="interesse" value="backend" />
+                <label for="interesse-backend">Back-end</label>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="comentarios">Comentários</label>
+              <textarea id="comentarios" name="comentarios" rows="4" placeholder="Deixe seu comentário aqui"></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="video-container">
+        <h2>Vídeo Demonstrativo</h2>
+        <p>Assista ao vídeo abaixo para ver exemplos práticos de código em TypeScript e entender melhor como a tipagem estática funciona na prática.</p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/QoqDr4H2G8U?si=LT7KR5jlsbXPyck6"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </main>
+
+    <footer>
+      <p>Desenvolvido por Pedro - estudante de Análise e Desenvolvimento de Sistemas, IFRS Campus Rio Grande - Trabalho de Front End, 2026.</p>
+    </footer>
+  </body>
+</html>
