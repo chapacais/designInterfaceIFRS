@@ -32,10 +32,6 @@ img {
   display: block;
 }
 
-a {
-  color: var(--azul);
-}
-
 code {
   background-color: var(--cinza-claro);
   padding: 4px 8px;
