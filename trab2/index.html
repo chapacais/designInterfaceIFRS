@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página educativa sobre a linguagem de programação Java: história, funcionamento da JVM, orientação a objetos e galeria de imagens." />
+    <title>Aprenda Java - Página Educativa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/modern-normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/menu.js" defer></script>
+  </head>
+
+  <body>
+    <header class="cabecalho-site">
+      <div class="conteudo">
+        <a href="#introducao" class="logo-site">
+          <img class="imagem" src="img/logo.png" alt="Logotipo Aprenda Java" width="60" height="60" />
+          <span class="texto">Aprenda Java</span>
+        </a>
+
+        <nav class="menu-principal">
+          <button type="button" class="botao">
+            <img class="abrir" src="img/menu.svg" alt="Ícone menu" width="28" height="28" />
+            <img class="fechar" src="img/fechar.svg" alt="Ícone fechar" width="28" height="28" />
+          </button>
+
+          <ul class="lista" id="menu-lista">
+            <li class="item"><a class="link" href="#introducao">Introdução</a></li>
+            <li class="item"><a class="link" href="#galeria">Galeria</a></li>
+            <li class="item"><a class="link" href="#exercicios">Exercícios</a></li>
+            <li class="item"><a class="link" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="conteudo-principal">
+      <h1 class="titulo-principal">Linguagem de Programação Java</h1>
+      <p class="destaque">
+        Java é uma das linguagens de programação mais usadas no mundo. Ela está presente em aplicativos Android, sistemas de bancos, servidores web e até em cartões inteligentes.
+        Nesta página você vai conhecer um pouco da história do Java, como ele funciona e quais são os seus principais conceitos.
+      </p>
+
+      <section id="introducao" class="secao-conteudo">
+        <article class="bloco-texto">
+          <h2 class="titulo">Um pouco de história</h2>
+          <p>
+            O Java começou a ser desenvolvido em 1991 por uma equipe da empresa
+            <b>Sun Microsystems</b>
+            , liderada por
+            <b>James Gosling</b>
+            . O projeto se chamava Green Project e a ideia inicial era criar uma linguagem para aparelhos eletrônicos, como TVs e controles remotos.
+          </p>
+          <p>
+            No começo a linguagem se chamava
+            <b>Oak</b>
+            (carvalho, em inglês), mas o nome teve que ser trocado porque já existia uma marca registrada com esse nome. O nome escolhido foi
+            <b>Java</b>
+            , que é uma ilha da Indonésia famosa pelo café. Por isso o símbolo da linguagem é uma xícara de café!
+          </p>
+          <p>
+            A linguagem foi apresentada oficialmente em 1995 e a primeira versão (JDK 1.0) saiu em janeiro de 1996. Em 2010 a Sun foi comprada pela
+            <b>Oracle</b>
+            , que hoje é a responsável pelo Java junto com a comunidade do projeto
+            <b>OpenJDK</b>
+            .
+          </p>
+        </article>
+
+        <article class="bloco-texto">
+          <h2 class="titulo">Como o Java funciona?</h2>
+          <p>
+            Uma das frases mais famosas sobre o
+            <b>Java</b>
+            é
+            <i>"Write once, run anywhere"</i>
+            (escreva uma vez, execute em qualquer lugar). Isso quer dizer que o mesmo programa pode rodar no Windows, no Linux ou no macOS sem precisar ser reescrito.
+          </p>
+
+          <h3 class="subtitulo">Compilação para bytecode</h3>
+          <p>
+            O código Java é escrito em arquivos com a extensão
+            <code>.java</code>
+            . Esses arquivos são compilados pelo programa
+            <code>javac</code>
+            , que gera arquivos
+            <code>.class</code>
+            . Esses arquivos não contêm código de máquina, e sim um código intermediário chamado
+            <b>bytecode</b>
+            .
+          </p>
+
+          <h3 class="subtitulo">A Máquina Virtual Java (JVM)</h3>
+          <p>
+            Quem executa o bytecode é a
+            <b>JVM</b>
+            (Java Virtual Machine). Cada sistema operacional tem a sua própria JVM, e é ela que traduz o bytecode para instruções que o computador entende. É por isso que o Java é
+            chamado de
+            <b>multiplataforma</b>
+            .
+          </p>
+
+          <figure class="figura-ilustrativa">
+            <img class="imagem" src="img/codigo_ate_jvm.webp" alt="Esquema mostrando o código .java sendo compilado para bytecode e executado pela JVM" width="800" height="450" />
+            <figcaption class="legenda">Do código-fonte até a execução na JVM.</figcaption>
+          </figure>
+
+          <h3 class="subtitulo">JDK, JRE e JVM</h3>
+          <ul class="lista">
+            <li>
+              <b>JVM:</b>
+              a máquina virtual que executa o bytecode.
+            </li>
+            <li>
+              <b>JRE:</b>
+              (Java Runtime Environment) a JVM mais as bibliotecas necessárias para rodar programas.
+            </li>
+            <li>
+              <b>JDK:</b>
+              (Java Development Kit) o JRE mais as ferramentas para desenvolver, como o compilador
+              <code>javac</code>
+              .
+            </li>
+          </ul>
+        </article>
+
+        <article class="bloco-texto">
+          <h2 class="titulo">Meu primeiro programa</h2>
+          <p>
+            Todo programa Java fica dentro de uma
+            <b>classe</b>
+            . O ponto de partida do programa é o método
+            <code>main</code>
+            . Veja o clássico "Olá, mundo!":
+          </p>
+
+          <pre class="bloco-codigo" tabindex="0">
+<code>public class OlaMundo {
+    public static void main(String[] args) {
+        System.out.println("Olá, mundo!");
+    }
+}</code>
+</pre>
+
+          <p>
+            Para executar, salve o arquivo como
+            <code>OlaMundo.java</code>
+            (o nome do arquivo precisa ser igual ao nome da classe), compile com
+            <code>javac OlaMundo.java</code>
+            e rode com
+            <code>java OlaMundo</code>
+            .
+          </p>
+        </article>
+
+        <article class="bloco-texto">
+          <h2 class="titulo">Orientação a Objetos</h2>
+          <p>
+            Java é uma linguagem
+            <b>orientada a objetos</b>
+            . Isso significa que o programa é organizado em
+            <b>classes</b>
+            , que funcionam como moldes, e
+            <b>objetos</b>
+            , que são criados a partir dessas classes. Por exemplo, a classe
+            <code>Carro</code>
+            pode ter atributos como cor e modelo, e cada carro criado é um objeto diferente.
+          </p>
+
+          <h3 class="subtitulo">Os quatro pilares</h3>
+          <ul class="lista">
+            <li>
+              <b>Abstração:</b>
+              representar só as características importantes de algo do mundo real.
+            </li>
+            <li>
+              <b>Encapsulamento:</b>
+              esconder os detalhes internos de uma classe e permitir o acesso só por métodos.
+            </li>
+            <li>
+              <b>Herança:</b>
+              uma classe pode herdar atributos e métodos de outra classe (palavra
+              <code>extends</code>
+              ).
+            </li>
+            <li>
+              <b>Polimorfismo:</b>
+              um mesmo método pode se comportar de formas diferentes dependendo do objeto.
+            </li>
+          </ul>
+        </article>
+
+        <article class="bloco-texto">
+          <h2 class="titulo">Tipos primitivos</h2>
+          <p>
+            O Java é uma linguagem
+            <b>fortemente tipada</b>
+            : toda variável precisa ter um tipo definido. Existem 8 tipos primitivos:
+          </p>
+          <ul class="lista">
+            <li>
+              <b>Números inteiros:</b>
+              <code>byte</code>
+              ,
+              <code>short</code>
+              ,
+              <code>int</code>
+              e
+              <code>long</code>
+              .
+            </li>
+            <li>
+              <b>Números com casas decimais:</b>
+              <code>float</code>
+              e
+              <code>double</code>
+              .
+            </li>
+            <li>
+              <b>Caractere:</b>
+              <code>char</code>
+              .
+            </li>
+            <li>
+              <b>Verdadeiro ou falso:</b>
+              <code>boolean</code>
+              .
+            </li>
+          </ul>
+          <p>
+            Além deles existem os tipos por referência, como
+            <code>String</code>
+            , que guarda textos, e os vetores (arrays).
+          </p>
+        </article>
+
+        <article class="bloco-texto">
+          <h2 class="titulo">Outras características</h2>
+          <h3 class="subtitulo">Garbage Collector</h3>
+          <p>
+            Em linguagens como C, o programador precisa liberar a memória manualmente. No Java existe o
+            <b>coletor de lixo</b>
+            (Garbage Collector), que remove automaticamente da memória os objetos que não são mais usados.
+          </p>
+
+          <h3 class="subtitulo">Versões do Java</h3>
+          <p>
+            Desde o Java 10 (2018), uma nova versão é lançada a cada seis meses. Algumas versões são chamadas de
+            <b>LTS</b>
+            (Long-Term Support) e recebem suporte por mais tempo, como o Java 8, 11, 17, 21 e 25. Empresas normalmente preferem usar as versões LTS.
+          </p>
+
+          <h3 class="subtitulo">Onde o Java é usado?</h3>
+          <p>
+            Java é muito usado em sistemas de empresas e bancos, em servidores web (com frameworks como o Spring), em aplicativos Android e em jogos, como a versão original do
+            Minecraft .
+          </p>
+        </article>
+      </section>
+
+      <section id="galeria" class="secao-conteudo -galeria">
+        <h2 class="titulo">Galeria</h2>
+        <p>Algumas imagens relacionadas ao mundo Java.</p>
+
+        <div class="galeria-fotos">
+          <figure class="cartao-foto">
+            <img class="imagem" src="img/logo.png" alt="Logotipo da linguagem Java com a xícara de café" width="400" height="300" loading="lazy" />
+            <figcaption class="legenda">Logotipo do Java</figcaption>
+          </figure>
+          <figure class="cartao-foto">
+            <img class="imagem" src="img/james_gosling.jpg" alt="Foto de James Gosling, criador do Java" width="400" height="300" loading="lazy" />
+            <figcaption class="legenda">James Gosling</figcaption>
+          </figure>
+          <figure class="cartao-foto">
+            <img class="imagem" src="img/java_ide.png" alt="Código Java aberto em um editor" width="400" height="300" loading="lazy" />
+            <figcaption class="legenda">Código Java em um editor</figcaption>
+          </figure>
+          <figure class="cartao-foto">
+            <img class="imagem" src="img/duke.webp" alt="Duke, mascote do Java, acenando" width="400" height="300" loading="lazy" />
+            <figcaption class="legenda">Duke, mascote do Java, acenando</figcaption>
+          </figure>
+        </div>
+
+        <div class="lista-referencias">
+          <h3 class="titulo">Referências</h3>
+          <ul class="lista">
+            <li>
+              Imagens:
+              <ul>
+                <li class="item">
+                  <a class="link" target="_blank" href="https://www.alura.com.br/artigos/jvm-conhecendo-processo-execucao-de-codigo">Do código-fonte até a execução na JVM.</a>
+                </li>
+                <li class="item"><a class="link" target="_blank" href="https://www.flaticon.com/br/icone-gratis/java_226777">Logotipo do Java</a></li>
+                <li class="item">
+                  <a class="link" target="_blank" href="https://pt.wikipedia.org/wiki/James_Gosling#/media/Ficheiro:James_Gosling_2008.jpg">Código Java aberto em um editor</a>
+                </li>
+                <li class="item"><a class="link" target="_blank" href="https://www.tecmint.com/best-java-ides/">James Gosling</a></li>
+                <li class="item">
+                  <a class="link" target="_blank" href="https://navigatone.com/2013/11/11/free-the-java-duke-now-use-it-in-blender/">Duke, mascote do Java, acenando</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Conteúdo:
+              <ul>
+                <li class="item"><a class="link" target="_blank" href="https://aws.amazon.com/pt/what-is/java/">O que é Java? - AWS Amazon</a></li>
+                <li class="item">
+                  <a class="link" target="_blank" href="https://pt.wikipedia.org/wiki/Java_(linguagem_de_programa%C3%A7%C3%A3o)">Java (linguagem de programação) - Wikipédia</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape-site">
+      <p class="texto">
+        Desenvolvido por
+        <b>Pedro Flores Chapacais</b>
+      </p>
+      <p class="texto">Trabalho 2 - CSS | Design de Interface - 2026</p>
+    </footer>
+  </body>
+</html>
