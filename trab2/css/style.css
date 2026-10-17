@@ -238,7 +238,7 @@ code {
   .imagem {
     border-radius: 8px;
     margin: 0 auto;
-    max-width: stretch;
+    max-width: 100%;
   }
 
   .legenda {
